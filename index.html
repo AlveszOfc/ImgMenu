@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>ImgMenu</title>
   <style>
     body {
       margin: 0;
-      background: #0d1117;
+      padding: 0;
+      background: #fff; /* fundo branco */
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
     }
     img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+      image-rendering: auto;
     }
   </style>
 </head>
@@ -30,7 +30,7 @@
       img.src = `./imagens/${image}.png`;
       document.body.appendChild(img);
     } else {
-      document.body.innerHTML = "<h2 style='color:white'>Adicione ?image=nome_da_imagem</h2>";
+      document.body.innerHTML = "<h2>Nenhuma imagem especificada.</h2>";
     }
   </script>
 </body>
