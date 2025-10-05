@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exibir Imagem</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <img id="display" src="" alt="Imagem não encontrada">
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const image = params.get('image');
+    if (image) {
+      document.getElementById('display').src = `./imagens/${image}.png`;
+    }
+  </script>
+</body>
+</html>
